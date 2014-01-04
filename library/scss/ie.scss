@@ -18,17 +18,18 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 */
 
-/* import mixins */
-@import "mixins";
+// import Font Awesome
+@import "incl/mixins";
 
-@import "grid";
+// import mixins
+@import "incl/mixins";
+
+@import "incl/grid";
 @import "481up";
 @import "768up";
 @import "1030up";
-
-/* 
-you can call the larger styles if you want, but there's really no need 
-*/
+ 
+//you can call the larger styles if you want, but there's really no need 
 
 
 /******************************************************************

@@ -16,7 +16,6 @@ read those. Below, we need to import only the stuff IE can't
 understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 */
-/* import mixins */
 /******************************************************************
 
 Stylesheet: Mixins & Constants Stylesheet
@@ -25,16 +24,16 @@ Stylesheet: Mixins & Constants Stylesheet
 /*********************
 CLEARFIXIN'
 *********************/
-/* line 12, ../scss/_mixins.scss */
+/* line 12, ../scss/incl/_mixins.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 14, ../scss/_mixins.scss */
+/* line 14, ../scss/incl/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 15, ../scss/_mixins.scss */
+/* line 15, ../scss/incl/_mixins.scss */
 .clearfix:after {
   clear: both;
 }
@@ -42,14 +41,14 @@ CLEARFIXIN'
 /*********************
 TOOLS
 *********************/
-/* line 23, ../scss/_mixins.scss */
+/* line 23, ../scss/incl/_mixins.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 30, ../scss/_mixins.scss */
+/* line 30, ../scss/incl/_mixins.scss */
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -73,53 +72,188 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 98, ../scss/_mixins.scss */
+/* line 98, ../scss/incl/_mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 104, ../scss/_mixins.scss */
+/* line 104, ../scss/incl/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 105, ../scss/_mixins.scss */
+/* line 105, ../scss/incl/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 106, ../scss/_mixins.scss */
+/* line 106, ../scss/incl/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 110, ../scss/_mixins.scss */
+/* line 110, ../scss/incl/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 116, ../scss/_mixins.scss */
+/* line 116, ../scss/incl/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 122, ../scss/_mixins.scss */
+/* line 122, ../scss/incl/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 128, ../scss/_mixins.scss */
+/* line 128, ../scss/incl/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 134, ../scss/_mixins.scss */
+/* line 134, ../scss/incl/_mixins.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BUTTONS
+*********************/
+/*
+ * Doh! Swiped this from 3.8. Thanks, WP, you doll.
+ */
+/******************************************************************
+
+Stylesheet: Mixins & Constants Stylesheet
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* line 12, ../scss/incl/_mixins.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 14, ../scss/incl/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 15, ../scss/incl/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*********************
+TOOLS
+*********************/
+/* line 23, ../scss/incl/_mixins.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 30, ../scss/incl/_mixins.scss */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 98, ../scss/incl/_mixins.scss */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/* line 104, ../scss/incl/_mixins.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 105, ../scss/incl/_mixins.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 106, ../scss/incl/_mixins.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 110, ../scss/incl/_mixins.scss */
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 116, ../scss/incl/_mixins.scss */
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 122, ../scss/incl/_mixins.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 128, ../scss/incl/_mixins.scss */
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 134, ../scss/incl/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -174,91 +308,91 @@ together, let's see how this works out. If you want to use 1140, the original
 values are commented out on each line.
 
 ******************************************************************/
-/* line 24, ../scss/_grid.scss */
+/* line 24, ../scss/incl/_grid.scss */
 .onecol {
   width: 5.801104972%;
 }
 
 /* 4.85%;  } /* grid_1  */
-/* line 25, ../scss/_grid.scss */
+/* line 25, ../scss/incl/_grid.scss */
 .twocol {
   width: 14.364640883%;
 }
 
 /* 13.45%; } /* grid_2  */
-/* line 26, ../scss/_grid.scss */
+/* line 26, ../scss/incl/_grid.scss */
 .threecol {
   width: 22.928176794%;
 }
 
 /* 22.05%; } /* grid_3  */
-/* line 27, ../scss/_grid.scss */
+/* line 27, ../scss/incl/_grid.scss */
 .fourcol {
   width: 31.491712705%;
 }
 
 /* 30.75%; } /* grid_4  */
-/* line 28, ../scss/_grid.scss */
+/* line 28, ../scss/incl/_grid.scss */
 .fivecol {
   width: 40.055248616%;
 }
 
 /* 39.45%; } /* grid_5  */
-/* line 29, ../scss/_grid.scss */
+/* line 29, ../scss/incl/_grid.scss */
 .sixcol {
   width: 48.618784527%;
 }
 
 /* 48%;    } /* grid_6  */
-/* line 30, ../scss/_grid.scss */
+/* line 30, ../scss/incl/_grid.scss */
 .sevencol {
   width: 57.182320438000005%;
 }
 
 /* 56.75%; } /* grid_7  */
-/* line 31, ../scss/_grid.scss */
+/* line 31, ../scss/incl/_grid.scss */
 .eightcol {
   width: 65.74585634900001%;
 }
 
 /* 65.4%;  } /* grid_8  */
-/* line 32, ../scss/_grid.scss */
+/* line 32, ../scss/incl/_grid.scss */
 .ninecol {
   width: 74.30939226%;
 }
 
 /* 74.05%; } /* grid_9  */
-/* line 33, ../scss/_grid.scss */
+/* line 33, ../scss/incl/_grid.scss */
 .tencol {
   width: 82.87292817100001%;
 }
 
 /* 82.7%;  } /* grid_10 */
-/* line 34, ../scss/_grid.scss */
+/* line 34, ../scss/incl/_grid.scss */
 .elevencol {
   width: 91.436464082%;
 }
 
 /* 91.35%; } /* grid_11 */
-/* line 35, ../scss/_grid.scss */
+/* line 35, ../scss/incl/_grid.scss */
 .twelvecol {
   width: 99.999999993%;
 }
 
 /* 100%;   } /* grid_12 */
-/* line 38, ../scss/_grid.scss */
+/* line 38, ../scss/incl/_grid.scss */
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;
   margin-left: 2.762430939%;
 }
 
-/* line 44, ../scss/_grid.scss */
+/* line 44, ../scss/incl/_grid.scss */
 .first {
   margin-left: 0;
 }
 
-/* line 48, ../scss/_grid.scss */
+/* line 48, ../scss/incl/_grid.scss */
 .last {
   float: right;
 }
@@ -520,9 +654,6 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
-/* 
-you can call the larger styles if you want, but there's really no need 
-*/
 /******************************************************************
 ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry

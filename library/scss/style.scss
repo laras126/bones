@@ -15,11 +15,17 @@ of the styles inside media queries.
 // IMPORTING STYLES
 //
 
+// get font awesome, wow!
+@import "../fonts/font-awesome-4.0.3/scss/font-awesome";
+
 // import normalize
-@import "normalize";
+@import "incl/normalize";
 
 // import mixins
-@import "mixins";
+@import "incl/mixins";
+
+// import grid (MQs included in it)
+@import "incl/grid";
 
 /*
 BASE (MOBILE) SIZE
@@ -51,9 +57,6 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
-
-	// import grids
-	@import "grid";
 
 	// styles in 768up.scss
 	@import "768up";
