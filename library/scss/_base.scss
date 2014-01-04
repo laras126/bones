@@ -15,11 +15,15 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	font-family: $serif;
-	font-size: 100%;
-	line-height: 1.5;
-	color: #565656;
+	font-size: $default;
+	line-height: $line-height-base;
+	color: $main-font-clr;
 }
 
 /********************
