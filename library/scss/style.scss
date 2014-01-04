@@ -13,14 +13,19 @@ of the styles inside media queries.
 // IMPORTING STYLES
 //
 
+// import variables
+@import "incl/settings";
+
+
+// import mixins
+@import "incl/mixins";
+
+
 // get font awesome, wow!
 @import "../fonts/font-awesome-4.0.3/scss/font-awesome";
 
 // import normalize
 @import "incl/normalize";
-
-// import mixins
-@import "incl/mixins";
 
 // import grid (MQs included in it)
 @import "incl/grid";
